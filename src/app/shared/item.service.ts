@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders } from "@angular/common/http";
 import {environment} from "../../environments/environment";
-import {Observable} from "rxjs";
-import {Item} from "./item.model";
+import {Observable, of} from "rxjs";
+
+import {Item} from "./item";
 import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
@@ -14,6 +15,6 @@ export class ItemService {
   };
   constructor(private http: HttpClient) { }
   getItemList(): Observable<Item[]> {
-    return this.http.get<Item[]>(environment.apiURL + "items", this.httpOptions);
+    return this.http.get<Item[]>(environment.apiURL + "items");
   }
 }

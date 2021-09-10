@@ -1,7 +1,7 @@
 export class OrderItem {
   id!: number;
-  orderID!: number;
-  itemID!: number;
+  orderId!: number;
+  itemId!: number;
   quantity!: number;
   itemName!:string;
   price!:number;

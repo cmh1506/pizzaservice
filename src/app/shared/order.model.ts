@@ -1,8 +1,8 @@
 export class Order {
   id!: number;
-  orderNo!: string;
-  customerID!: number;
+  customerId!: number;
+  customer!: string;
   pMethod!: string;
   gTotal!: number;
-  deletedOrderItemIDs!: string;
+  deletedOrderItemIds!: string;
 }
